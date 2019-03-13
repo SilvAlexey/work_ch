@@ -24,7 +24,7 @@ def data_loading(config):
 
     for filename in glob.glob(os.path.join(cn[0], '*.csv')):
         logging.info("Read file %s" % filename)
-        data = (insert_db(filename, cn[4], cn[5], backup))
+        data = insert_db(filename, cn[4], cn[5], backup)
 
         if backup:
             path = cn[1] + "/" + filename[filename.rfind('/') + 1 : ]  #Именовать файлы по времени: str(datetime.now().timetz())
@@ -72,6 +72,6 @@ def insert_db(filename, host, table, backup=False):
     return td
 
 
-data_loading(open(r'/home/alexey/Рабочий стол/alexey/PycharmProjects/work_chconfig.txt'))
+data_loading(open(r'/home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/config.txt'))
 
 

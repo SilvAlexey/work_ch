@@ -1,0 +1,8 @@
+#Директория выходных файлов
+/home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/parser
+#Директория лога и имя лог файла
+/home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/log
+log-parser
+#Имя хоста и таблицы
+localhost
+test
