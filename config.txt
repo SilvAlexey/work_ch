@@ -1,0 +1,11 @@
+#Директория входных файлов
+/home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/csv
+#Директория бэкапа
+/home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/backup
+#Директория лога и имя лог файла
+/home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/log
+log-work
+#Имя хоста и таблицы
+localhost
+test
+
