@@ -21,21 +21,25 @@ def data_parsing(config):
     if os.path.isfile(path):
         parser = csv_read(path)
 
-        n = 0
-
+        x=0
         for row in parser:
-            if data[n][0] == datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'):
-                print(data)
-                data.pop(n)
-                continue
-            n = n + 1
+            print(x)
+            x = x + 1
+            n = 0
+            for row_data in data:
+                if row_data[0] == datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'):
+
+                    data.pop(n)
+                    continue
+                n = n + 1
 
         parser.extend(data)
+
         csv_writer(parser, path)
 
     else:
         logging.info("Create file %s ..." % path)
-        with open(r''+path, 'a', newline='') as csv_file:
+        with open(r''+path, 'w', newline='') as csv_file:
             writer = csv.writer(
                 csv_file,
                 delimiter=',',
@@ -49,7 +53,7 @@ def data_parsing(config):
 
 def csv_writer(data, path):
     logging.info("Rewrite file %s ..." % path)
-    with open(r'' + path, 'a', newline='') as csv_file:
+    with open(r'' + path, 'w', newline='') as csv_file:
         writer = csv.writer(
             csv_file,
             delimiter=',',
