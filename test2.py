@@ -21,21 +21,19 @@ def data_parsing(config):
     if os.path.isfile(path):
         parser = csv_read(path)
 
-        x=0
+        dict_data = {}
+        for row in data:
+            dict_data[row[0]] = row[1] + '|' + str(row[2]) + '|' + str(row[3])
+
+        dict_parser = {}
         for row in parser:
-            print(x)
-            x = x + 1
-            n = 0
-            for row_data in data:
-                if row_data[0] == datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'):
+            dict_parser[datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S')] = row[1] + ' ' + str(row[2]) + ' ' + str(row[3])
 
-                    data.pop(n)
-                    continue
-                n = n + 1
+        logging.info("New lines(%s will be added..." % (len(dict_data) - len(dict_parser)))
+        dict_parser.update(dict_data)
+        logging.info("Done!")
 
-        parser.extend(data)
-
-        csv_writer(parser, path)
+        csv_writer(dict_parser, path)
 
     else:
         logging.info("Create file %s ..." % path)
@@ -60,8 +58,8 @@ def csv_writer(data, path):
             quotechar=',',
             quoting=csv.QUOTE_MINIMAL
         )
-        for line in data:
-            writer.writerow(line)
+        for key, value in data.items():
+            writer.writerow([key] + value.split('|'))
 
     logging.info("Done!")
 

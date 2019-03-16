@@ -18,3 +18,18 @@ INFO:root:Writing data to a table test...
 INFO:root:Done!
 INFO:root:Writing data in /home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/backup/MOCK_DATA (2).csv
 INFO:root:Done!
+INFO:root:Read file /home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/csv/MOCK_DATA.csv
+INFO:root:Writing data to a table test...
+INFO:root:Done!
+INFO:root:Writing data in /home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/backup/MOCK_DATA.csv
+INFO:root:Done!
+INFO:root:Read file /home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/csv/MOCK_DATA.csv
+INFO:root:Writing data to a table test...
+INFO:root:Done!
+INFO:root:Writing data in /home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/backup/MOCK_DATA.csv
+INFO:root:Done!
+INFO:root:Read file /home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/csv/MOCK_DATA (2).csv
+INFO:root:Writing data to a table test...
+INFO:root:Done!
+INFO:root:Writing data in /home/alexey/Рабочий стол/alexey/PycharmProjects/work_ch/backup/MOCK_DATA (2).csv
+INFO:root:Done!
